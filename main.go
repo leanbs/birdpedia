@@ -7,11 +7,14 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func main() {
+func newRouter() *mux.Router {
 	r := mux.NewRouter()
-
 	r.HandleFunc("/hello", handler).Methods("GET")
+	return r
+}
 
+func main() {
+	r := newRouter()
 	http.ListenAndServe(":8065", r)
 }
 
