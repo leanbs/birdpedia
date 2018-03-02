@@ -5,33 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>birdpedia</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <h1>birdpedia</h1>
-  <table>
-    <tr>
-      <th>Specied</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>Pigeon</td>
-      <td>Common in cities</td>
-    </tr>
-  </table>
-  <br />
-
-  <form action="/bird" method="post">
-    Species: 
-    <input type="text" name="species">
+  <div class="birdpedia__content">
+    <h1>birdpedia</h1>
+    <table class="birdpedia__table">
+      <thead>
+        <th>Specied</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr class="birdpedia__table--row">
+          <td>Pigeon</td>
+          <td>Common in cities</td>
+        </tr>
+      </tbody>
+    </table>
     <br />
-    Description:
-    <input type="text" name="description">
-    <br/>
-    <input type="submit" value="Submit">
-  </form>
-
+  
+    <form action="/bird" method="post">
+      <label class="birdpedia__label">Species: </label>
+      <input type="text" name="species">
+      <br />
+      <label class="birdpedia__label">Description:</label>
+      <input type="text" name="description">
+      <br/>
+      <input class="birdpedia__btn--submit" type="submit" value="Submit">
+    </form>
+  </div>
   <script>
-    birdTable = document.querySelector("table");
+    birdTable = document.querySelector("tbody");
 
     fetch("/bird")
       .then(res => res.json())

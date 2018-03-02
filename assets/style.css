@@ -1,0 +1,25 @@
+.birdpedia__content {
+  width: 470px;
+  margin: auto;
+}
+
+.birdpedia__table {
+  width: 470px;
+  border: 1px solid #E0E0E0;
+}
+
+.birdpedia__label {
+  width: 96px;
+  display: inline-block;
+}
+
+.birdpedia__table--row {
+  border: 1px solid #E0E0E0;
+}
+
+.birdpedia__btn--submit {
+  width: 88px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
