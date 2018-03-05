@@ -17,6 +17,10 @@
   border: 1px solid #E0E0E0;
 }
 
+.birdpedia__table--row:nth-child(odd) {
+  background-color: #F3F3F3;
+}
+
 .birdpedia__btn--submit {
   width: 88px;
   padding: 16px;

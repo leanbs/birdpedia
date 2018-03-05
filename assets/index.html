@@ -42,6 +42,7 @@
       .then(birdList => {
         birdList.forEach(bird => {
           row = document.createElement("tr");
+          row.className = 'birdpedia__table--row'
           species = document.createElement("td");
           species.innerHTML = bird.species;
           description = document.createElement("td");
